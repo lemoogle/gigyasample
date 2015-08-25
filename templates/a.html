@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>Gigya Test</title>
+
+		<!-- The following script directive is included for your convenience -->
+		<!-- socialize.js script should only be included once -->
+		<script type="text/javascript" src="http://cdn.gigya.com/js/socialize.js?apiKey=2_Y82PzwJ_chSFImHXaIDJClnLyJzmk-VFOavSsaNTzl6m901s_NNxRAS0xJ3bd3_N"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/static/shared.js"></script>
+
+	</head>
+	<body>
+		<div style="border: 1px solid skyblue; padding: 15px; width: 400px; display: block; height: auto;">
+
+		<p>
+		Login with a social network provider:
+		</p>
+		<div id="login">
+		</div>
+
+
+		<script type="text/javascript" >
+
+
+	gigya.socialize.addEventHandlers({
+	    onLogin:checkEmail,
+	   }
+	);
+
+
+gigya.socialize.showLoginUI({
+		height: 100
+		,width: 330
+		,showTermsLink:false // remove 'Terms' link
+		,hideGigyaLink:true // remove 'Gigya' link
+		,showWhatsThis: true // Pop-up a hint describing the Login Plugin, when the user rolls over the Gigya link.
+		,containerID: 'login' // The component will embed itself inside the loginDiv Div
+		,cid:''
+		});
+
+
+</script>
+
+<div id="emailForm" style="display: None">
+	<p> We need to associate an email to your account! Enter your email here!
+	</p>
+	<form action="javascript:login()">
+	Email:<input id="emailInput" type="text" name="email">
+	<button type="submit">Submit</button>
+	</form>
+</div>
+
+</div>
+	</body>
+</html>
